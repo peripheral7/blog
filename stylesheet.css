@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+  body  {
+    background-color: lightgreen;
+  }
+}
+
+#timetable {
+  text-align: center;
+  border: solid;
+}
+div.timetable {
+  display:inline-block;
+  width: 20%;
+  border: 1px solid;
+  border-radius: 2px;
+  font: bold 1rem sans-serif;
+  margin: 2px;
+  padding: 1rem;
+
+}
+div {
+  word-wrap: break-word;  /*강제개행*/
+}
