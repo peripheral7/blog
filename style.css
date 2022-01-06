@@ -1,0 +1,67 @@
+@media screen and (min-width: 768px) {
+  body {
+    background-color: black;
+  }
+}
+
+
+body {
+  font-family: 'Nanum Myeongjo', serif;
+  background-color:rgb(242, 249, 255);
+}
+
+h2 {
+  
+  padding: 10px;
+  text-align: center;
+}
+
+.explain_header{
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+  margin: 10px
+}
+
+
+.bean {
+  width: 40%;
+  height: ;
+  object-fit: cover;
+  margin: 10px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+  img:hover {
+    transform: scale(1.1);
+}
+
+#roasting {
+  display:block;
+  background-color: rgba(95, 158, 160, 0.144);
+  text-align: center;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.center {
+  width: 80%;
+  margin: auto;
+}
+
+.container {
+  width: 400px;
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: 1fr;
+}
+
+.item {
+  background-color: burlywood;
+}
+
+footer {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
