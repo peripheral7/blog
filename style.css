@@ -1,22 +1,85 @@
-@media screen and (min-width: 768px) {
-  body {
-    background-color: black;
+html {
+  box-sizing: border-box;
+}
+
+/* font-family: 'Nanum Myeongjo', serif; */
+
+body {
+  background-color: burlywood;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+
+header {
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+
+header h1 {
+  font-size: 3em;
+}
+
+section {
+  margin: auto;
+}
+
+/* .centerflex {
+  display: flex;
+} */
+
+nav {
+  background-color: rgba(44, 20, 7, 0.904);
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* order matters.  */
+@media only screen and (min-width: 640px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    flex: 1;
   }
 }
 
+nav a {
+  display: block;
+  text-align: center;
+  margin: 5px;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.4;
+  color: white;
+  background-color: rgb(85, 48, 24);
+  font-size: 1.2rem;
+}
 
-body {
-  font-family: 'Nanum Myeongjo', serif;
-  background-color:rgb(242, 249, 255);
+nav .navlink:hover {
+  color: white;
+  background-color: rgb(168, 116, 38);
 }
 
 h2 {
-  
   padding: 10px;
   text-align: center;
 }
 
-.explain_header{
+.explain_header {
   width: 40%;
   display: inline-block;
   text-align: center;
@@ -25,28 +88,14 @@ h2 {
 
 
 .bean {
-  width: 40%;
-  height: ;
+  width: 100px;
   object-fit: cover;
   margin: 10px;
   overflow: hidden;
   transition: all 0.2s linear;
 }
-  img:hover {
-    transform: scale(1.1);
-}
-
-#roasting {
-  display:block;
-  background-color: rgba(95, 158, 160, 0.144);
-  text-align: center;
-  height: auto;
-  border-radius: 5px;
-}
-
-.center {
-  width: 80%;
-  margin: auto;
+img:hover {
+  transform: scale(1.1);
 }
 
 .container {
@@ -56,12 +105,89 @@ h2 {
   grid-template-columns: 1fr;
 }
 
-.item {
+.ratiocalculator {
+  text-align: right;
+}
+
+.orderflex {
+  
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.orderitem {
   background-color: burlywood;
+  width: 500px;
+  margin: 10px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+
+  display: flex;
+}
+.centerflex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#philosophy1 {
+margin: auto;
+ line-height: 150%;
+ width: 80%;
+}
+
+
+.guidecard {
+  display: block;
+
+  background-color: rgba(95, 158, 160, 0.144);
+  text-align: center;
+  height: auto;
+  border-radius: 5px;
+}  /* 포스트카드처럼 백그라운드 색상하고 영역만 설정 */
+
+.imagegroup {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  display: inline-block;
+}
+.imagegroupitem {
+
 }
 
 footer {
   text-align: center;
   width: 80%;
   margin: auto;
+}
+
+.roasted {
+  text-align: center;
+}
+
+#philosophy1 {
+  text-align: center;
+
+}
+
+#sitename:link {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#sitename:visited {
+  color: rgb(48, 32, 3);
+  text-decoration: none;
+}
+
+#sitename:hover {
+  transform: scale(1.1);
 }
