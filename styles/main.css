@@ -1,0 +1,17 @@
+header {
+  width: 800px;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+header #header {
+
+  margin: 100px 50px;
+  padding: 50px 50px;
+  background-color: bisque;
+}
+
+body {
+  
+}

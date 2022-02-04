@@ -1,18 +1,147 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Blog</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>☕커피 브루잉 가이드</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="main.css">
-  
+  <meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+  <meta property="og:description" content="">
+  <meta property="og:title" content="커피 브루잉 가이드">
+
+
+  <link rel="stylesheet" href="styles/reset.css" />
+  <!-- <link rel="stylesheet" href="styles/original.css"> -->
+  <link rel="stylesheet" href="styles/original.css">
 </head>
-<body>
-  <h1>Peripheral Things Getting Ready...</h1>
 
-  <script src="main.js"></script>
+<body>
+  <div id="background"></div>
+  <header>
+    <h1 class="en"><a href="index.html">Coffee Brewing Guide</a></h1>
+    <h1 class="ko">커피 브루잉 가이드</h1>
+  </header>
+
+
+  <div class="wrapper">
+
+    <div class="item" id="brewer">
+      <fieldset>
+        <legend>추출기구</legend>
+
+        <input type="radio" name="brewer" value="Kono" id="Kono" />
+        <label class="brewer" id="brewer1" for="Kono"></label>
+
+        <input type="radio" name="brewer" value="Aeropress" id="Aeropress" />
+        <label class="brewer" id="brewer2" for="Aeropress"></label>
+
+        <input type="radio" name="brewer" value="hariov60" id="hariov60" checked /><label class="brewer" id="brewer3"
+          for="hariov60"></label>
+      </fieldset>
+    </div>
+
+    <div class="item" id="roasting">
+      <fieldset>
+        <legend>로스팅</legend>
+        <input type="radio" name="roasting" value="Light" id="light" /><label class="roastingcolor" id="roastingcolor1"
+          for="light"></label>
+
+        <input type="radio" name="roasting" value="Medium" id="medium" checked />
+        <label class="roastingcolor" id="roastingcolor2" for="medium"></label>
+
+        <input type="radio" name="roasting" value="Dark" id="dark" />
+        <label class="roastingcolor" id="roastingcolor3" for="dark"></label>
+      </fieldset>
+    </div>
+
+    <div class="item" id="grind">
+      <fieldset>
+        <legend>그라인드 사이즈</legend>
+        <input type="radio" name="grind" value="Fine" id="fine" /><label class="grind" id="grind1" for="fine"></label>
+
+        <input type="radio" name="grind" value="Medium" id="medium-grind" checked />
+        <label class="grind" id="grind2" for="medium-grind"></label>
+
+        <input type="radio" name="grind" value="Coarse" id="coarse" />
+        <label class="grind" id="grind3" for="coarse"></label>
+      </fieldset>
+    </div>
+
+    <div class="item" id="cups">
+      <fieldset>
+        <legend>원두와 물의 비율</legend>
+        <!-- 스위치로 range 또는 숫자입력 -->
+        <input id="coffee" class="input" type="number" name="coffee-weight" id="coffee-weight" min="10" max="40"
+          step="1" oninput='handleOnInput(this, 2)'/>
+        <label class="labels" for="coffee-weight">g</label>
+        
+        <input id="ratio" class="input" type="number" name="ratio" id="ratio" min="10" max="18" value="15" oninput='handleOnInput(this, 2)'/>
+        <label class="labels" for="ratio">ratio</label>
+
+        <input id="water" class="input" type="number" name="water" id="water" min="100" max="500" step="10"
+          value="240" oninput='handleOnInput(this, 3)'/>
+        <label class="labels" for="water">g</label>
+
+
+        <input id="temp" class="input" type="number" name="temp" id="temp" min="100" max="80" step="1" value="90" />
+        <label class="labels" for="water">C</label>
+
+      </fieldset>
+    </div>
+
+    <div class="item" id="brewing">
+      <h1>추출 레시피</h1>
+
+      <table>
+        <tr class="">
+          <td>뜸들이기</td>
+          <td>40g</td>
+          <td>40s</td>
+          <td>약한 물줄기로 사뿐히 적셔주기</td>
+        </tr>
+        <tr>
+          <td>1차추출</td>
+          <td>80g</td>
+          <td>50s</td>
+          <td>살짝 빠른 물줄기로 단맛을 추출하기</td>
+        </tr>
+        <tr>
+          <td>2차추출</td>
+          <td>60g</td>
+          <td>40s</td>
+          <td>중간 물줄기로 본격적인 추출</td>
+        </tr>
+        <tr>
+          <td>3차추출</td>
+          <td>50g</td>
+          <td>30s</td>
+          <td>강한 물줄기로 모든 맛을 뽑아내기</td>
+        </tr>
+        <tr>
+          <td>4차추출</td>
+          <td>30g</td>
+          <td>20s</td>
+          <td>중간 물줄기로 빠르게 마무리</td>
+        </tr>
+      </table>
+      <form action='#'>
+      <input id="finish" type="submit" value="추출 완료" alt="추출완료">
+      </form>
+    </div>
+
+
+  </div>
+  <footer>
+
+    <a href="login.html">Login</a>
+
+  </footer>
+
+
+  <script src="/es6/main.js"></script>
 </body>
+
 </html>
