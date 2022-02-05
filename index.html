@@ -70,7 +70,7 @@
     </div>
 
     <div class="item" id="cups">
-      <fieldset>
+      <fieldset id="ratio-fieldset">
         <legend>원두와 물의 비율</legend>
         <!-- 스위치로 range 또는 숫자입력 -->
         <input id="coffee" class="input" type="number" name="coffee-weight" id="coffee-weight" min="10" max="40"
@@ -84,9 +84,9 @@
           value="240" oninput='handleOnInput(this, 3)'/>
         <label class="labels" for="water">g</label>
 
-
-        <input id="temp" class="input" type="number" name="temp" id="temp" min="100" max="80" step="1" value="90" />
-        <label class="labels" for="water">C</label>
+        
+        <input id="temp" class="input" type="number" name="temp" min="100" max="80" step="1" value="90" />
+        <label class="labels" for="water">&#8451;</label>
 
       </fieldset>
     </div>
