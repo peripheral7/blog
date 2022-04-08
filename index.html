@@ -22,6 +22,7 @@
   <header>
     <h1 class="en"><a href="index.html">Coffee Brewing Guide</a></h1>
     <h1 class="ko">커피 브루잉 가이드</h1>
+    <p>(연습 프로젝트라 비율 계산기만 작동합니다)</p>
   </header>
 
 
@@ -74,17 +75,18 @@
         <legend>원두와 물의 비율</legend>
         <!-- 스위치로 range 또는 숫자입력 -->
         <input id="coffee" class="input" type="number" name="coffee-weight" id="coffee-weight" min="10" max="40"
-          step="1" oninput='handleOnInput(this, 2)'/>
+          step="1" oninput='handleOnInput(this, 2)' />
         <label class="labels" for="coffee-weight">g</label>
-        
-        <input id="ratio" class="input" type="number" name="ratio" id="ratio" min="10" max="18" value="15" oninput='handleOnInput(this, 2)'/>
+
+        <input id="ratio" class="input" type="number" name="ratio" id="ratio" min="10" max="18" value="15"
+          oninput='handleOnInput(this, 2)' />
         <label class="labels" for="ratio">ratio</label>
 
-        <input id="water" class="input" type="number" name="water" id="water" min="100" max="500" step="10"
-          value="240" oninput='handleOnInput(this, 3)'/>
+        <input id="water" class="input" type="number" name="water" id="water" min="100" max="500" step="10" value="240"
+          oninput='handleOnInput(this, 3)' />
         <label class="labels" for="water">g</label>
 
-        
+
         <input id="temp" class="input" type="number" name="temp" min="100" max="80" step="1" value="90" />
         <label class="labels" for="water">&#8451;</label>
 
@@ -93,47 +95,63 @@
 
     <div class="item" id="brewing">
       <h1>추출 레시피</h1>
-      <h2>(임시레시피. 따라하지마시오.)</h2>
+      <h2></h2>
 
       <table>
+
+        <tr class="header">
+          <th>순서</th>
+          <th>추가량</th>
+          <th>소요시간</th>
+          <th>디테일</th>
+        </tr>
         <tr class="">
           <td>뜸들이기</td>
-          <td>40g</td>
-          <td>40s</td>
-          <td>약한 물줄기로 사뿐히 적셔주기</td>
+          <td>35g</td>
+          <td>30s</td>
+          <td>사뿐히 적셔주며 추출을 준비한다.</td>
         </tr>
         <tr>
           <td>1차추출</td>
-          <td>80g</td>
-          <td>50s</td>
-          <td>살짝 빠른 물줄기로 단맛을 추출하기</td>
+          <td>75g</td>
+          <td>30s</td>
+          <td>15초 정도 부어줌</td>
         </tr>
         <tr>
           <td>2차추출</td>
-          <td>60g</td>
-          <td>40s</td>
-          <td>중간 물줄기로 본격적인 추출</td>
+          <td>100g</td>
+          <td>30s</td>
+          <td>20초 정도 부어줌</td>
         </tr>
         <tr>
           <td>3차추출</td>
-          <td>50g</td>
+          <td>40g</td>
           <td>30s</td>
-          <td>강한 물줄기로 모든 맛을 뽑아내기</td>
+          <td>강한 물줄기로 빠르게</td>
         </tr>
         <tr>
           <td>4차추출</td>
-          <td>30g</td>
-          <td>20s</td>
-          <td>중간 물줄기로 빠르게 마무리</td>
+          <td>-</td>
+          <td>-</td>
+          <td>생략</td>
         </tr>
       </table>
       <form action='#'>
-      <input id="finish" type="submit" value="추출 완료" alt="추출완료">
+        <input id="finish" type="submit" value="추출 완료" alt="추출완료">
       </form>
     </div>
 
 
   </div>
+
+  <div class="slider">
+    <div class="slides">
+      <div id="slide-1"><img src="images/1.jpeg" alt="coffee"></div>
+      <div id="slide-2"><img src="images/2.png" alt="coffee"></div>
+      <div id="slide-3"><img src="images/3.jpg" alt="coffee"></div>
+    </div>
+  </div>
+
   <footer>
 
     <a href="login.html">Login</a>
@@ -142,6 +160,7 @@
 
 
   <script src="main.js"></script>
+
 </body>
 
 </html>

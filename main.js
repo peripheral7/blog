@@ -1,12 +1,19 @@
 const $input1 = document.getElementById("coffee");
 $input1.focus();
-$input1.value = "16";
+$input1.value = "20";
 
 
 //coffee ratio calculator
 let ratio = document.querySelector("#ratio");
+let gram = document.querySelector("#coffee");
 
 ratio.addEventListener('keyup', function () {
+  const coffee = document.querySelector("#coffee").value;
+  const ratio = document.querySelector("#ratio").value;
+  document.querySelector('#water').value = ratio * coffee;
+});
+
+gram.addEventListener('keyup', function () {
   const coffee = document.querySelector("#coffee").value;
   const ratio = document.querySelector("#ratio").value;
   document.querySelector('#water').value = ratio * coffee;
